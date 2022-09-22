@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 function App() {
   const cards = [
     {
-      headline: "אתרים",
+      headline: "אתר",
       addLabel: "הוספת אתר",
       image: "../Images/picture_logo.png",
     },
