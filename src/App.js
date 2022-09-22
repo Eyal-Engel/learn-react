@@ -1,43 +1,48 @@
-import { BrowserRouter as Router } from "react-router-dom";
-import Nav from "./components/Nav/Nav";
-import Planner from "./components/Planner/Planner";
-import Calculator from "./components/Calculator/Calculator";
-import Student from "./components/Student/Student";
-// import Student from '/components/Student/Student';
-import "./App.css";
-import Login from "./components/Login/Login";
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import Dashboard from "./components/Dashboard/Dashboard";
-import Cards from "./components/Cards/Cards";
-import { Switch, Route } from "react-router-loading";
-// import CallState from "./components/CallState/CallState";
+import Card from "./Card";
+import Navbar from "./Navbar";
+
 function App() {
+  const cards = [
+    {
+      headline: "אתרים",
+      addLabel: "הוספת אתר",
+      image: "../Images/picture_logo.png",
+    },
+    {
+      headline: "חניכים",
+      addLabel: "הוספת חניך",
+      image: "../Images/picture_logo.png",
+    },
+    {
+      headline: "מסלולים",
+      addLabel: "הוספת מסלול",
+      image: "../Images/picture_logo.png",
+    },
+    {
+      headline: "מקצועות",
+      addLabel: "הוספת מקצוע",
+      image: "../Images/picture_logo.png",
+    },
+  ];
+
   return (
-    <>
-      <div>
-        <Provider store={store}>
-          <Router>
-            <div>
-              {sessionStorage.logged_in == 1 ? (
-                <>
-                  <Nav />
-                </>
-              ) : null}
-              <Switch>
-                <Route path="/" exact component={Home}></Route>
-                <Route path="/planner" component={Planner}></Route>
-                <Route path="/student" component={Student}></Route>
-                <Route path="/Calculator" component={Calculator}></Route>
-                <Route path="/routes_cards" component={Cards}></Route>
-                <Route path="/Dashboard" component={Dashboard}></Route>
-              </Switch>
-            </div>
-          </Router>
-        </Provider>
+    <div className="App">
+      <Navbar />
+      <div className="content">
+        <div className="left">Dashboards</div>
+        <div className="right">
+          <div className="cardsLine">
+            <Card cards={cards[0]} />
+            <Card cards={cards[1]} />
+          </div>
+          <div className="cardsLine">
+            <Card cards={cards[2]} />
+            <Card cards={cards[3]} />
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
-const Home = () => <Login />;
+
 export default App;
