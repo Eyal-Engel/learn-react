@@ -106,74 +106,7 @@ const Planner = () => {
       {!get_logged_in ? (
         <div style={{ color: "white" }}>Please connect properly !</div>
       ) : (
-        <>
-          <div className="Planner">
-            {loading && <div>Loading</div>}
-            {!loading && (
-              <>
-                <div className="Actions">
-                  {flagHebrew ? (
-                    <>
-                      {/* <button className="AddRoute" type="submit"
-                                            onClick={() => {
-                                                setModalOpen(true);
-                                            }}
-                                        >
-                                            <AiFillCheckCircle className='icon' />
-                                            &nbsp;&nbsp;
-                                            {saveButton}
-                                        </button> */}
-
-                      {/* &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;
-                                        <button className="AddRoute" type="submit"
-                                            onClick={() => {
-                                                setModalOpen(true);
-                                            }}
-                                        >
-                                            <MdHelpOutline className='icon' />
-                                            &nbsp;&nbsp;
-                                            Help
-                                        </button> */}
-                    </>
-                  ) : (
-                    <>
-                      {/* <button className="AddRoute" type="submit" style={{
-                                            position: 'absolute',
-                                            right: '70px',
-
-                                        }}
-                                            onClick={() => {
-                                                setModalOpen(true);
-                                            }}
-                                        >
-                                            {saveButton}
-                                            &nbsp;&nbsp;
-                                            <AiFillCheckCircle className='icon' />
-                                        </button> */}
-                    </>
-                  )}
-                  {/* כפתור שפות */}
-                  {/* <button className="language" style={{ marginLeft: marginHebrew }}
-                                        onClick={() => {
-                                            if (Hebrew !== false)
-                                                hebrew();
-                                            else
-                                                english();
-                                        }}>{language}</button> */}
-                </div>
-
-                {modalOpen && (
-                  <Modal setOpenModal={setModalOpen} setText={get_Name} />
-                )}
-                <div>
-                  {/* <Places setFloatLang={floatLan} sites={sites} stations={stations} myTasks={myTasks} drag={drag}
-                                        addSite={addSite} addStation={addStation} addMyTask={addMyTask} titlePlacesCss={titlePlacesCss}
-                                        titleStationCss={titleStationCss} titleTaskCss={titleTaskCss} flagHebrew={flagHebrew} /> */}
-                </div>
-              </>
-            )}
-          </div>
-        </>
+        <></>
       )}
     </>
   );
