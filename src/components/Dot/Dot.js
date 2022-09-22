@@ -1,10 +1,11 @@
-// import './style.css';
+import './style.css';
 
-// const Dot = (props) => {
-//     return (
-//         <>
-//             <div className="dot" style={{ backgroundColor: props.color }}></div>
-//         </>
-//     );
-// }
-// export default Dot;
+const Dot = (props) => {
+    return (
+        <>
+            <div className="dot" style={{ backgroundColor: props.color }}></div>
+        </>
+    );
+}
+export default Dot;
+
